@@ -1,8 +1,17 @@
-
 function fetchProducts(done){
 	$.get('/api/products', function(data){
 		// console.log("is this working")
 		// console.log(data)
+		done(data)
+	})
+}
+
+function addProduct(name,manufacturer, price, done){
+	$.post('/api/products', {
+		name : name,
+		manufacturer : manufacturer,
+		price : price
+	}, function(data){
 		done(data)
 	})
 }
@@ -23,15 +32,3 @@ function createProductCard(product){
 	</div>`
 	)
 }
-
-$(function(){
-
-	let productList = $('#product-list')
-	fetchProducts(function(products){
-		productList.empty()
-		for(product of products){
-			productList.append(createProductCard(product))
-		}
-	})
-
-})

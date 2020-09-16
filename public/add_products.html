@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shop</title>
+	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script type="text/javascript" src = "shop.js"></script>
-	<script type="text/javascript" src = "index.js"></script>
+	<script type="text/javascript" src = "add_products.js"></script>
 </head>
 <body>
-	<div class = "container">
+	<div class = "p-4">
+		<h3 class = "text-center">Add Products</h3>
 		<div class = "row">
-			<div class = "col"></div> 
-			<h2 class = "col">Shop</h2> 
-			<div class = "col"></div> 
+			<div class = "col"></div>
+			<div class = "col-6">
+				<form>
+					<div class = "form-group">
+						<label for = "productName">Product Name</label>
+						<input type="text" name = "name" id="productName">
+					</div>
+					<div class = "form-group">
+						<label for = "productManufacturer">Manufacturer</label>
+						<input type="text" name = "manufacturer" id="productManufacturer">
+					</div>
+					<div class = "form-group">
+						<label for = "productPrice">Price</label>
+						<input type="text" name = "price" id="productPrice">
+					</div>
+
+				</form>
+				<button id = "btnProductAdd"class = "btn btn-secondary">Add</button>
+			</div>
+			<div class = "col"></div>
 		</div>
-		<div class = "row" id="product-list">
-			
-		</div>
+				
 	</div>
+
 </body>
 </html>
